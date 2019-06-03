@@ -3,7 +3,7 @@ import org.apache.commons.net.imap.IMAPSClient;
 import org.apache.commons.net.PrintCommandListener;
 import java.io.IOException;
 
-class EmailClient {
+public class EmailClient {
     private final String host;
     private final int port;
     private final String email;
