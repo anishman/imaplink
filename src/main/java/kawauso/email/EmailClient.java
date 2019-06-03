@@ -24,8 +24,20 @@ public class EmailClient {
         client.login(email, password);
     }
 
-    public void logout()  throws IOException {
+    public void logout() throws IOException {
         client.logout();
         client.disconnect();
+    }
+
+    public void selectFolder (String folder) throws IOException {
+        client.select (folder);
+    }
+
+    public void searchSubject (String searchStr) throws IOException {
+        client.search ("SUBJECT " + searchStr);
+    }
+
+    public void fetchHeader (String index) throws IOException {
+        client.fetch (index, "body[header]");
     }
 }
